@@ -8,6 +8,12 @@ public:
 	int age;
 };
 
+void clear_screen()
+{
+  std::cout << "\033[2J";    // clear the screen
+  std::cout << "\033[1;1H";  // move cursor home
+}
+
 Student * findOldestStudent(const std::vector<Student *> &students)
 {
 	Student * oldest = students[0];
@@ -70,6 +76,9 @@ int main(int argc, char *argv[])
 				std::cout << "Exiting program." << std::endl;
 			break;
 			default:
+				clear_screen();
+				std::cout << "Invalid choice." << std::endl;
+				std::cout << std::endl;
 			;
 		}
 	} while (choice != '4');

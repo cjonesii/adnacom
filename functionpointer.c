@@ -1,4 +1,4 @@
-// as used in observer pattern
+// function pointers as used in observer pattern
 
 #include <stdio.h>
 

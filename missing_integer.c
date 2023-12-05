@@ -1,12 +1,13 @@
-/* missing integer 
-* important note: ignore value bigger than N
-* 
-*/
+/* missing integer
+ * important note: ignore value bigger than N
+ * actually this seems like a different version
+ * of lowest_num_not_in_arr.c
+ */
 #include <stdio.h>
 
-int sol( int A[], int N)
+int solution( int A[], int N )
 {
-    int map[N];
+    int map[N]; // Space complexity O(2n).. bad!
     int item = 0;
 
     for( int i = 0; i < N; i++ )
@@ -35,7 +36,7 @@ int sol( int A[], int N)
 int main( void )
 {
     int res = 0;
-    int a[5] = {0,1,5,3,4};
-    res = sol(a,5);
-    printf("res %d\n", res);
+    int a[1] = {50};
+    res = solution(a,1);
+    printf("result %d\n", res);
 }
